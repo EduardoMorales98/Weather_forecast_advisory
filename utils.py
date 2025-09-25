@@ -61,7 +61,7 @@ def send_message(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,input_date,df,query,PHONE_
     if df.empty:
         body = f"Good morning, today's weather forecast ({input_date}) in {query} is:\n\n No rain today"
     else:
-        body = f"Good morning, today's weather forecast ({input_date}) in {query} is:\n\n str({df})"
+        body = f"Good morning, today's weather forecast ({input_date}) in {query} is:\n\n {df}"
 
 
     message = client.messages.create(
